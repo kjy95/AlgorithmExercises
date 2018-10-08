@@ -6,16 +6,17 @@ for _ in range(9):
 result =0
 flag=0
 for i in range(9):
-    tempheights = heights
+    tempheights = heights.copy()
     tempheights.remove(tempheights[i])
     for k in range(8):
-        temptempheights = tempheights
-        print(temptempheights)
-       # temptempheights.remove(temptempheights[k])
+        temptempheights = tempheights.copy()
+        temptempheights.remove(temptempheights[k])
         tempresult = sum(temptempheights) 
         if tempresult ==100:
             flag = 1
             break
     if flag ==1:
         break
-print(temptempheights)
+temptempheights.sort()
+for temptempheight in temptempheights:
+    print(temptempheight)
