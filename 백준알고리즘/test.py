@@ -1,3 +1,4 @@
 
-point_list = [0]*5001
-point_list[0:4]=""
+test = 10
+for i in range(1,10):
+    print(i)
